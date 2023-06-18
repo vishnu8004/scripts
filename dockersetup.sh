@@ -4,6 +4,7 @@
 # Copyright (c) vewris.com
 # This scripts sets up docker repository to your linux desktop and installs docker engine
 
+echo "Entha bro modenoo!!!!!!!!"
 # Update the apt package index and install packages to allow apt to use a repository over HTTPS:
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg
