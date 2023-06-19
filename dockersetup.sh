@@ -4,10 +4,9 @@
 # Copyright (c) vewris.com
 # This scripts sets up docker repository to your linux desktop and installs docker engine
 
-echo "Entha bro modenoo!!!!!!!!"
 # Update the apt package index and install packages to allow apt to use a repository over HTTPS:
 sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
+sudo apt-get install ca-certificates curl gnupg -y
 
 # Add Docker’s official GPG key:
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -34,10 +33,10 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 # Prerequisites:
 
 # For non-Gnome Desktop environments, gnome-terminal must be installed:
-sudo apt install gnome-terminal
+sudo apt install gnome-terminal -y
 
 # Uninstall the tech preview or beta version of Docker Desktop for Linux.
-sudo apt remove docker-desktop
+sudo apt remove docker-desktop -y
 
 # For a complete cleanup, remove configuration and data files at $HOME/.docker/desktop, the symlink at /usr/local/bin/com.docker.cli, and purge the remaining systemd service files.
 rm -r $HOME/.docker/desktop
@@ -45,7 +44,7 @@ sudo rm /usr/local/bin/com.docker.cli
 sudo apt purge docker-desktop
 
 # Install Docker Desktop
-sudo apt install docker-desktop
+sudo apt install docker-desktop -y
 
 echo "Setup Complete. Now you can install docker-desktop"
 
